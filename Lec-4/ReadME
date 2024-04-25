@@ -2,3 +2,12 @@ Updated by Raghu ReadME
 
 
 # Terraform Variables and Outputs.
+Variables in Terraform are a great way to define centrally controlled reusable values. The information in Terraform variables is saved independently from the deployment plans, which makes the values easy to read and edit from a single file.
+
+Terraform Variable Official Documentation:
+https://developer.hashicorp.com/terraform/language/values/variables
+
+Terraform Output Official Documentation:
+https://developer.hashicorp.com/terraform/language/values/outputs
+
+Terraform input variables are used as parameters to input values at run time to customize our deployments. Input terraform variables can be defined in the main.tf configuration file but it is a best practice to define them in a separate variable**.tf** file to provide better readability and organization.
