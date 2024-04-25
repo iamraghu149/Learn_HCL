@@ -1,7 +1,7 @@
 Updated by Raghu ReadME
 
 
-# Terraform Variables and Outputs.
+# Terraform Variables and Outputs:
 Variables in Terraform are a great way to define centrally controlled reusable values. The information in Terraform variables is saved independently from the deployment plans, which makes the values easy to read and edit from a single file.
 
 Terraform Variable Official Documentation:
@@ -11,3 +11,95 @@ Terraform Output Official Documentation:
 https://developer.hashicorp.com/terraform/language/values/outputs
 
 Terraform input variables are used as parameters to input values at run time to customize our deployments. Input terraform variables can be defined in the main.tf configuration file but it is a best practice to define them in a separate variable**.tf** file to provide better readability and organization.
+
+################################################
+
+Types of variables:
+1. Input Variables
+2. Output Variables
+3. Local Variables
+
+## Local Variables:
+• Local variables are declared using the "locals" block.
+• Local variables are accessible within the module/configuration where they are declared.
+
+## Input Variables:
+• Input variables in Terraform let users specify specific values when creating their infrastructure.
+• Input Variables are declared through the "variable" block, but there are many other ways to define a variable.
+• Variables can hold data of different Datatype.
+
+variable block attributes 
+• type - to identify the type of the variable being declared.
+• default - default value in case the value is not provided explicitly.
+• description - a description of the variable. This description is also used to generate documentation for the module.
+• validation - to define validation rules.
+• sensitive — a boolean value. If true, Terraform masks the variable's value anywhere it displays the variable.
+ 
+
+
+
+## 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
