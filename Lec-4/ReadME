@@ -28,7 +28,7 @@ Types of variables:
 • Input Variables are declared through the "variable" block, but there are many other ways to define a variable.
 • Variables can hold data of different Datatype.
 
-variable block attributes 
+## variable block attributes 
 • type - to identify the type of the variable being declared.
 • default - default value in case the value is not provided explicitly.
 • description - a description of the variable. This description is also used to generate documentation for the module.
@@ -38,17 +38,54 @@ variable block attributes
 
 
 
-## 
+## Ways to define variables in Terraform:
+• Within Configuration Files using the variable block.
+• Via a CLI prompt during Terraform initialization or execution.
+• Via Command-Line Flags using the -var option.
+• Via Environment Variables prefixed with TF_VAR_.
+• Via a tvars file or tfvars.json file.
+• Via the Terraform Cloud or Terraform Enterprise Ul.
+
+
+## We have used below as:
+
+terraform plan -var="bucketname=mybucket0149"
+1. Variable Block
+2. CLI Prompt
+3. -var flag
+
+$ terraform plan -var="bucketname=technologies143" -var-file="staging.tfvars"
+$ terraform apply -var="bucketname=technologies143" -var-file="prod.tfvars"
 
 
 
+## Terraform Outputs:
+• Get endpoints, IP addresses, and database user credentials in the terminal using outputs.
+• to get all outputs declare run: terraform output
+
+output "instance_id" {
+value       = aws_instance.Web_server.id
+description = "AWS EC2 instance ID"
+sensitive   = false
+}
+
+------------------>>
+$ terraform plan
+$ terraform refresh 
+$ terraform output
 
 
+##############################################
+#output "IPAddress" {
+  #value = aws_instance.Web-Server.public_ip
+#}
 
+output "DNS" {
+  value = aws_instance.Web-Server.public_dns
+}
 
-
-
-
+$ terraform refresh 
+$ terraform output
 
 
 
