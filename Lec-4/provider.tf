@@ -1,1 +1,4 @@
-Updated by Raghu ReadME
+provider "aws" {
+  #Configurations options
+  region = "ap-south-1"
+}
